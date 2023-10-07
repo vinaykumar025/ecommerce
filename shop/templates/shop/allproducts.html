@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ourstore</title>
+        <style>
+            li{
+                padding: 3mm;
+            }
+            ol{
+                border: solid;
+                border-width: medium;
+                background-color: aqua;
+                bo
+            }
+        </style>
+    </head>
+    <body>
+        
+        {% if allproducts %}
+            <ol>
+                {% for product in allproducts %}
+                    <li>{{product.name}}</li>
+                {% endfor %}
+            </ol>
+        {% else %}
+            <p>No products</p>
+        {% endif %}
+</body>
+
+</html>
